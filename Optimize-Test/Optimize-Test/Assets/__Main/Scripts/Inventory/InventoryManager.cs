@@ -10,18 +10,14 @@ public class InventoryManager : MonoBehaviour
 {
     [Inject] private IGeneralSettings _generalSettings;
     [Inject] private IInventoryPool _inventoryPool;
-    [SerializeField] private InventoryInfoPanel InfoPanel;
-    [SerializeField] private InventoryItem InventoryItemPrefab;
     [SerializeField] private ScrollRect _scrollRect;
     [SerializeField] private GameObject Container;
     [SerializeField] private DisplayData _displayData;
-
     [Multiline] [SerializeField] private string ItemJson;
-    [SerializeField] private int ItemGenerateScale = 10;
+    [SerializeField] private int ItemGenerateScale ;
     [SerializeField] private Sprite[] Icons;
-
-
-    private InventoryItemData[] ItemDatas;
+    
+    private InventoryItemData[] ItemDatas;// to cache all data
 
 
     // i know you just needed to multiplay data to fake lots of data to make me use paginations.
@@ -90,22 +86,22 @@ public class InventoryManager : MonoBehaviour
 
     private void OnPlayerScroll(Vector2 position)
     {
-        if (position.y >= 0.99f)
+        if (position.y >= InventoryScrollConfig.ScrollStartCheck)
         {
             Debug.Log("scroller start");
             UpdateIndex(-_generalSettings.InventoryPoolSize);
             bool updated = UpdateUiList(_listIndexReference);
             if (updated)
-                _scrollRect.verticalNormalizedPosition = 0.02f;
+                _scrollRect.verticalNormalizedPosition = InventoryScrollConfig.ScrollerRestart;
         }
-        else if (position.y <= 0.01f)
+        else if (position.y <= InventoryScrollConfig.ScrollerEndCheck)
         {
             Debug.Log("scroller end");
             UpdateIndex(_generalSettings.InventoryPoolSize);
             ;
             bool updated = UpdateUiList(_listIndexReference);
             if (updated)
-                _scrollRect.verticalNormalizedPosition = 0.98f;
+                _scrollRect.verticalNormalizedPosition = InventoryScrollConfig.ScrollReEndCheck;
         }
     }
 
@@ -121,7 +117,7 @@ public class InventoryManager : MonoBehaviour
     private IEnumerator ResetCanUpdate()
     {
         _canUpdate = false;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(InventoryScrollConfig.ResetTime);
         _canUpdate = true;
     }
 
