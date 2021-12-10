@@ -108,9 +108,7 @@ public class AutoSaver
         if (IsDebugEnabled) Debug.Log("AutoSaver: ON");
     }
 
-    /// <summary>
-    /// Unregister AutoSaver's update to Editor's update
-    /// </summary>
+
     public static void DeactivateAutosaver()
     {
         EditorApplication.update -= OnUpdate;

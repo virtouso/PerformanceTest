@@ -9,7 +9,7 @@ public class SceneMainInstaller : MonoInstaller
     public override void InstallBindings()
     {
         Container.Bind<IGeneralSettings>().To<GeneralSettings>().FromScriptableObject(_generalSettings).AsSingle();
-        Container.BindFactory<InventoryItem, InventoryItem.Factory>().FromInstance(_inventoryItem);
+        Container.BindFactory<InventoryItem, InventoryItem.Factory>().FromComponentInNewPrefab(_inventoryItem).AsTransient();
         Container.Bind<IInventoryPool>().To<InventoryPool>().FromComponentsInHierarchy().AsSingle();
     }
 }

@@ -853,7 +853,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &705507994
 Light:
   m_ObjectHideFlags: 0
@@ -2452,6 +2452,10 @@ MonoBehaviour:
   InventoryItemPrefab: {fileID: 6081411390659113483, guid: 46ded8a5055eb4241b31608b2989c5c4, type: 3}
   _scrollRect: {fileID: 833496519}
   Container: {fileID: 466751961}
+  _displayData:
+    _statsText: {fileID: 1246654298}
+    _descriptionText: {fileID: 167740133}
+    _iconImage: {fileID: 1964813374}
   ItemJson: "{\r\n    \"ItemDatas\":\r\n    [\r\n        {\r\n            \"Name\":
     \"carton of ice cream\",\r\n            \"Description\": \"A carton of ice cream.\",\r\n           
     \"Stat\": 94,\r\n            \"IconIndex\": 29\r\n        },\r\n        {\r\n           
@@ -2925,15 +2929,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3524837760268592273, guid: 46ded8a5055eb4241b31608b2989c5c4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3524837760268592273, guid: 46ded8a5055eb4241b31608b2989c5c4, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3524837760268592273, guid: 46ded8a5055eb4241b31608b2989c5c4, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 236.99997
       objectReference: {fileID: 0}
     - target: {fileID: 3524837760268592273, guid: 46ded8a5055eb4241b31608b2989c5c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2945,7 +2949,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3524837760268592273, guid: 46ded8a5055eb4241b31608b2989c5c4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 118.499985
       objectReference: {fileID: 0}
     - target: {fileID: 3524837760268592273, guid: 46ded8a5055eb4241b31608b2989c5c4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2967,25 +2971,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: InventoryItem
       objectReference: {fileID: 0}
+    - target: {fileID: 3524837760268592278, guid: 46ded8a5055eb4241b31608b2989c5c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5135131544143862494, guid: 46ded8a5055eb4241b31608b2989c5c4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5135131544143862494, guid: 46ded8a5055eb4241b31608b2989c5c4, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5135131544143862494, guid: 46ded8a5055eb4241b31608b2989c5c4, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 5135131544143862494, guid: 46ded8a5055eb4241b31608b2989c5c4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 255
       objectReference: {fileID: 0}
     - target: {fileID: 5135131544143862494, guid: 46ded8a5055eb4241b31608b2989c5c4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -32.5
       objectReference: {fileID: 0}
     - target: {fileID: 6081411390659113483, guid: 46ded8a5055eb4241b31608b2989c5c4, type: 3}
       propertyPath: _icon
@@ -3013,23 +3021,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7831318128446387545, guid: 46ded8a5055eb4241b31608b2989c5c4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7831318128446387545, guid: 46ded8a5055eb4241b31608b2989c5c4, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7831318128446387545, guid: 46ded8a5055eb4241b31608b2989c5c4, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 7831318128446387545, guid: 46ded8a5055eb4241b31608b2989c5c4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7831318128446387545, guid: 46ded8a5055eb4241b31608b2989c5c4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -32.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46ded8a5055eb4241b31608b2989c5c4, type: 3}

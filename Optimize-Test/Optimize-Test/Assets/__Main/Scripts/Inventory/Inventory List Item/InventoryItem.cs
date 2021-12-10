@@ -19,6 +19,7 @@ public class InventoryItem : MonoBehaviour, IInventoryItem
         _name.text = nameText;
         transform.SetParent(parent,false);
         _button.onClick.AddListener(buttonAction);
+        gameObject.SetActive(true);
     }
 
     public void UpdateColor(Color color)
